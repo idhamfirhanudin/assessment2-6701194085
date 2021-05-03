@@ -11,7 +11,7 @@ require "config.php";
 try {
     $conn = new PDO("mysql:host=$host", $username, $password, $options);
     $sql = file_get_contents("pabw.sql");
-    $connection->exec($sql);
+    $conn->exec($sql);
     
     echo "Database and table users created successfully.";
 } catch(PDOException $error) {
